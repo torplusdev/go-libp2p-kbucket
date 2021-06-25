@@ -159,6 +159,13 @@ func (f *Filter) TryAdd(p peer.ID) bool {
 
 	peerGroups := make([]PeerGroupInfo, 0, len(addrs))
 	for _, a := range addrs {
+
+		_, err := a.ValueForProtocol(ma.P_ONION3)
+
+		if err == nil {
+			continue
+		}
+
 		ip, err := manet.ToIP(a)
 		if err != nil {
 			dfLog.Errorw("failed to parse IP from multiaddr", "appKey", f.logKey,
