@@ -14,3 +14,10 @@ require (
 )
 
 go 1.15
+
+
+replace github.com/libp2p/go-libp2p-core => ../go-libp2p-core
+
+replace github.com/multiformats/go-multiaddr => ../go-multiaddr
+
+replace github.com/multiformats/go-multiaddr-net => ../go-multiaddr-net
