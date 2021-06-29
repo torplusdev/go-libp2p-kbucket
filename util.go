@@ -12,7 +12,7 @@ import (
 
 // Returned if a routing table query returns no results. This is NOT expected
 // behaviour
-var ErrLookupFailure = errors.New("failed to find any peer in table")
+var ErrLookupFailure = errors.New("failed to find any peer in table (updated)")
 
 // ID for IpfsDHT is in the XORKeySpace
 //
